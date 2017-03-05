@@ -184,17 +184,30 @@ BODY {
 #event_end::before {content: "Event Ends: ";}
 
 /* Animation */
+@keyframes glow_w {
+	0% {color: #fff;}
+	50% {color: #888;}
+	100% {color: #fff;}
+}
+@keyframes glow_y {
+	0% {color: #ff0;}
+	50% {color: #880;}
+	100% {color: #ff0;}
+}
+#playlist li:nth-child(1) .performer {animation: glow_w 2s infinite;}
+#playlist li:nth-child(1) .time::before {animation: glow_y 2s infinite;}
+
 @keyframes slideleft {
-  0% {right: -2000px;}
-  100% {right: 16px;}
+	0% {right: -2000px;}
+	100% {right: 16px;}
 }
 @keyframes slideright {
-  0% {left: -2000px;}
-  100% {left: 0px;}
+	0% {left: -2000px;}
+	100% {left: 0px;}
 }
 @keyframes slideup {
-  0% {bottom: -2000px;}
-  100% {bottom: 16px;}
+	0% {bottom: -2000px;}
+	100% {bottom: 16px;}
 }
 #playlist li {animation: slideright 1s forwards; left: -2000px;}
 #playlist li:nth-child(1) {animation-delay: 0.0s;}
