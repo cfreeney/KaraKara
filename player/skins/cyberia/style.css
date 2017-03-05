@@ -73,7 +73,7 @@ BODY {
 	top: calc(6em + 64px);
 	right: 16px;
 	bottom: 40%;
-	width: 40%;
+	width: calc(50% - 96px);
 	border: 1px solid black;
 	border-width: 15px;
 	border-image: url('border.png') 15 fill stretch;
