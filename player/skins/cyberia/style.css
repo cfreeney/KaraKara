@@ -8,6 +8,11 @@ BODY {
 	background-size: cover;
 	color: white;
 	font-family: cyberia;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -108,6 +113,7 @@ BODY {
 }
 #playlist li:nth-child(1) .time {
 	color: rgba(0,0,0,0);
+	text-shadow: none;
 }
 #playlist li:nth-child(1) .time::before {
 	content: "You're up!";
@@ -115,9 +121,10 @@ BODY {
 }
 #playlist li:nth-child(2) .time {
 	color: rgba(0,0,0,0);
+	text-shadow: none;
 }
 #playlist li:nth-child(2) .time::before {
-	content: "Soon!";
+	content: "Nearly there!";
 	color: #aa0;
 }
 #playlist img {display: none;}
@@ -194,7 +201,14 @@ BODY {
 	50% {color: #880;}
 	100% {color: #ff0;}
 }
-#playlist li:nth-child(1) .performer {animation: glow_w 2s infinite;}
+@keyframes glow_g {
+	0% {color: #aaa;}
+	50% {color: #555;}
+	100% {color: #aaa;}
+}
+/*#playlist li:nth-child(1) .performer {animation: glow_w 2s infinite; animation-delay: 10s;}*/
+/*#playlist li:nth-child(1) .title {animation: glow_w 2s infinite; animation-delay: 20s;}*/
+/*#playlist li:nth-child(1) .from {animation: glow_g 2s infinite; animation-delay: 20s;}*/
 #playlist li:nth-child(1) .time::before {animation: glow_y 2s infinite;}
 
 @keyframes slideleft {
