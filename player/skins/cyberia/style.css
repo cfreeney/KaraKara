@@ -7,6 +7,9 @@
 	src: url(Xolonium-Regular.ttf);
 	font-weight:400;
 }
+HTML {
+	font-size: 2.5vh;
+}
 BODY {
 	background: url('background.png');
 	background-size: cover;
