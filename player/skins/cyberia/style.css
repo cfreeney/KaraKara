@@ -199,9 +199,11 @@ BODY {
 
 /*---------------------------------------------------------------------------*/
 /* Small-screen tweaks */
+/* Draw a line between 16/10 (widescreen) and 16/12 (4:3) - by default we */
+/* use the default layout, for display areas closer to 4:3 we override bits */
 /*---------------------------------------------------------------------------*/
 
-@media (max-width: 1050px) {
+@media (max-aspect-ratio: 16/11) {
 	#playlist li {
 		width: 60%;
 	}
